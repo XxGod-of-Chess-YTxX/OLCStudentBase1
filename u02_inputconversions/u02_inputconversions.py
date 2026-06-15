@@ -23,7 +23,7 @@
 # float - decimal number
 
 number = float(input("Enter the Circle Radius: "))#############
-pi = 3.14 #idk
+pi = 3.14 #six seven
 
 print(f"The area of the circle is {pi * number * number}")#answer
 
