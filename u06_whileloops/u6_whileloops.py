@@ -54,31 +54,626 @@
 # while loop validation
 
 ### check for number .isdigit()
-while True:# infinite loop
+# while True:# infinite loop
     
-    age = input("Enter your age: ")
+#     age = input("Enter your age: ")
 
-    #validation
-    if age.isdigit():
-        age = int(age) #convert to a number
+#     #validation
+#     if age.isdigit():
+#         age = int(age) #convert to a number
 
 
-        if age > 16:
-            print("You go to JC.")
-        elif age > 12:
-            print("You go to Secondary")
-        elif age > 6:
-            print("You go to Primary")
-        else:
-            print("You are too young")
+#         if age > 16:
+#             print("You go to JC.")
+#         elif age > 12:
+#             print("You go to Secondary")
+#         elif age > 6:
+#             print("You go to Primary")
+#         else:
+#             print("You are too young")
 
-        break #complete the program
+#         break #complete the program
+#     else:
+#         print("This is not a number")#test
+#         '''
+#         breh
+#         '''
+###########################################################
+# WHILE LOOP PRACTICE EXERCISES (O LEVEL COMPUTING REVISION)
+# Focus: while, while True, break, input validation
+# Note: Some exercises may combine both a while and for loop
+###########################################################
+
+
+#------------------------------------------------------------
+# Exercise 1: Count Up
+# Print numbers from 1 to 5 using a while loop.
+# Example Output: 1 2 3 4 5
+#------------------------------------------------------------
+eg = 1
+while eg < 6:
+    print(eg)
+    eg += 1
+
+
+
+#------------------------------------------------------------
+# Exercise 2: Count Down
+# Print numbers from 10 down to 1 using a while loop.
+# Example Output: 10 9 8 ... 1
+#------------------------------------------------------------
+countdown = 10
+while countdown > 0:
+    print(countdown)
+    countdown -= 1
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 3: Even Numbers Until N
+# Ask for an integer N. Print all even numbers from 2 up to N inclusive.
+# Sample Input: 12
+# Example Output: 2 4 6 8 10 12
+#------------------------------------------------------------
+# n = int(input("Enter an integer: "))
+# y = 2
+# while y < n:
+#     print(y)
+#     y += 2
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 4: Summation with While
+# Calculate the sum of numbers 1 to 100.
+# Example Output: 5050
+#------------------------------------------------------------
+add = 1
+sum = 0
+while add <= 100:
+    sum += add
+    add += 1
+print(sum)
+
+
+
+#------------------------------------------------------------
+# Exercise 5: Multiplication Table
+# Ask for an integer x. Print its first 10 multiples in "x * i = value" format.
+# Sample Input: 7
+# Example Output:
+# 7 * 1 = 7
+# 7 * 2 = 14
+# 7 * 3 = 21
+#------------------------------------------------------------
+# x = int(input("Enter a whole number: "))
+# i = 1
+# while i <= 10:
+#     print(f"{x} * {i} = {x*i}")
+#     i += 1
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 6: While True + break 
+# Repeatedly ask for integers and add them to a total.
+# Stop when user enters "END" (case-insensitive).
+# Print total after stopping.
+# Sample Inputs: 10, 20, 5, END
+# Example Output: Total = 35
+#------------------------------------------------------------
+# sum2 = 0
+
+# while True:
+#     ask = input("Enter a hole number (end to quit): ")
+
+#     if ask.isdigit():
+#         sum2 += int(ask)
+#     elif ask.lower() == "end":
+#         print(f"Total sum: {sum2}")
+#         break
+#     else:
+#         print("Please enter a number or 'end'.")
+
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 7: While True  (Skip Negatives)
+# Repeatedly accept integers. If number is negative, skip and ignore it.
+# Stop on 0. Print count of valid positives and their sum.
+# Sample Inputs: -3, 5, 12, -1, 4, 0
+# Example Output: Count = 3, Sum = 21
+#------------------------------------------------------------
+# count = 0
+# sumadd = 0
+# while True:
+#     repeatask = int(input("Enter integer: "))
+#     if repeatask < 0:
+#         print("negative number ignored")
+#     elif repeatask > 0:
+#         sumadd += repeatask
+#         count += 1
+#     elif repeatask == 0:
+#         print(f"totalsum: {sumadd}")
+#         break
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 8: Presence Check (Non-Empty String)
+# Ask for a name. Keep asking until a non-empty name is entered.
+# Then greet the user.
+# Sample Input: "" -> "   " -> "Alex"
+# Example Output: Hello, Alex!
+#------------------------------------------------------------
+# name = input("Enter your name: ").strip()
+
+# while name == "":
+#     name = input("Enter your name: ").strip()
+
+# print(f"Hello, {name}!")
+
+
+
+#------------------------------------------------------------
+# Exercise 9: Length Check (Username)
+# Ask for a username that must be 5 to 12 characters long.
+# Keep prompting until valid, then print "Username accepted".
+# Sample Inputs: "ab" (invalid), "student01" (valid)
+#------------------------------------------------------------
+# while True:
+#     username = str(input("Enter a username between 5 and 12 characters long: "))
+#     if len(username) < 5 or len(username) > 12:
+#         print("username too short or too long")
+#     else:
+#         print(f"Username accepted")
+#         break
+
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 10: Range Check (Quiz Score)
+# Ask for an integer score between 0 and 100 inclusive.
+# Keep prompting until valid, then print "Score recorded: ".
+# Sample Inputs: 120 (invalid), -5 (invalid), 85 (valid)
+#------------------------------------------------------------
+# while True:
+#     prompt = int(input("Enter a whole numner between 1 and 100: "))
+#     if prompt < 1 or prompt > 100:
+#         print("Invalid")
+#     else:
+#         print("Valid")
+#         break
+
+
+
+
+#------------------------------------------------------------
+# Exercise 11: Format Check (Positive Integer Only)
+# Ask for an input that must be a positive integer that is more than 0 (e.g., "42", "85").
+# If letters or symbols appear, ask again.
+# Sample Inputs: "abc" -> "-4" -> "12" (valid)
+#------------------------------------------------------------
+# while True:
+#     a = input("Enter positive number: ")
+#     if a.isdigit():
+#         if int(a) >= 1:
+#             print("Valid")
+#             break
+#         else:
+#             print("Invalid")
+#     else:
+#         print("Invalid")
+
+
+
+
+#------------------------------------------------------------
+# Exercise 12: Format Check (Email)
+# Ask for an email that must contain exactly one '@' and at least one '.' after it.
+# No spaces allowed. Keep asking until valid, then print "Email accepted".
+# Sample Inputs: "userexample.com" (invalid), "user@site.com" (valid)
+#------------------------------------------------------------
+# while True:
+#     email = input("Enter an email: ")
+#     if "@" in email and "." in email:
+#         if " " not in email:
+#             print(f"valid {email}")
+#             break
+#         else:
+#             print("invalid")
+#     else:
+#         print("invalid")
+
+
+
+
+#------------------------------------------------------------
+# Exercise 13: Existence Check (Course Code)
+# Given list: valid_codes = ["7155", "8640", "9421", "3562"]
+# Ask user for a course code. Repeat until code exists in list.
+# Print "Code found" when valid.
+# Sample Inputs: "2026" (prints invalid), "9421" (prints valid)
+#------------------------------------------------------------
+# valid_codes = ["7155", "8640", "9421", "3562"]
+# while True:
+#     coursecode = str(input("Enter a code: "))
+#     if str(coursecode) in valid_codes:
+#         print(f"Valid {coursecode}")
+#         break
+#     else:
+#         print("Invalid")
+
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 14: Combined Checks (Password Policy)
+# Requirements:
+# - Non-empty
+# - Length between 8 and 16
+# - Must contain at least one digit 0-9
+# - No spaces
+# Keep prompting until valid, then print "Password set".
+# Sample Inputs: "abc" (invalid), "abcd efgh1" (invalid), "GoodPass1" (valid)
+#------------------------------------------------------------
+# while True:
+#     password = input("Enter a password: ")
+
+#     if password == "":
+#         print("Invalid password")
+#     elif " " in password:
+#         print("Invalid password")
+#     elif len(password) < 8 or len(password) > 16:
+#         print("Invalid password")
+#     else:
+#         has_digit = False
+
+#         for char in password:
+#             if char.isdigit():
+#                 has_digit = True
+
+#         if has_digit:
+#             print("Password set")
+#             break
+#         else:
+#             print("Invalid password")
+
+
+
+
+#------------------------------------------------------------
+# Exercise 15: Menu Loop
+# Menu:
+# (1) Add number
+# (2) Show total
+# (3) Reset total
+# (4) Exit
+# Handle invalid choice with "Invalid choice" and continue.
+# For (1), ask integer & add to total. For (2), show total. For (3), reset.
+# For (4), break loop and print "Goodbye".
+#------------------------------------------------------------
+# total = 0
+
+# while True:
+#     print("Menu:")
+#     print("(1) Add number")
+#     print("(2) Show total")
+#     print("(3) Reset total")
+#     print("(4) Exit")
+
+#     menu = input("Enter a number for feature: ")
+
+#     if menu.isdigit():
+#         if menu == "1":
+#             addnum = int(input("Enter a number to add: "))
+#             total += addnum
+
+#         elif menu == "2":
+#             print(f"Total sum: {total}")
+
+#         elif menu == "3":
+#             total = 0
+#             print("Total reset")
+
+#         elif menu == "4":
+#             print("Goodbye")
+#             break
+
+#         else:
+#             print("Invalid choice")
+#     else:
+#         print("Invalid choice")
+
+
+
+
+#------------------------------------------------------------
+# Exercise 16: Bounded Attempts (PIN Validation)
+# Correct PIN = "2468"
+# User has up to 3 attempts.
+# Checks:
+# - Non-empty
+# - Exactly 4 digits
+# - Digits only
+# If correct, print "Access granted" and stop.
+# if incorrect, print out incorrect reason
+# If all attempts used, print "Access denied".
+#------------------------------------------------------------
+# attempts = 3
+# CorrectPIN = "2468"
+# while True:
+#     if attempts > 0:
+#         guess = input("Guess a 4-digit number: ") # str() -- input() is already string
+#         if guess == "":
+#             print("Invalid guess")
+#         else:
+#             if guess.isdigit():
+#                 if len(guess) == 4:
+#                     if int(guess) == int(CorrectPIN):
+#                         print("Correct guess")
+#                         break
+#                     else:
+#                         print("Wrong guess")
+#                         attempts -= 1
+#                 else:
+#                     print("Invalid guess")
+#             else:
+#                 print("Invalid guess")
+#     else:
+#         print("no more guess")
+#         break
+        
+
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 17: Clean List Input
+# Ask user to enter positive integers separated by commas, e.g. "3,5,10".
+# Validation:
+# - Not empty
+# - Each item integer only (no letters, decimals)
+# - Each integer between 1 and 100 inclusive
+# Repeat until valid, then print list length and sum.
+# Sample Inputs: "3,5,200" (invalid), "3,five" (invalid), "2,10,8" (valid)
+#------------------------------------------------------------
+# while True:
+#     numlist = input("Enter numbers separated by commas: ")
+
+#     if numlist == "":
+#         print("Invalid")
+#         continue
+
+#     listtotal = 0
+#     listcount = 0
+#     current = ""
+#     valid = True
+
+#     for ch in numlist:
+#         if ch.isdigit():
+#             current += ch
+#         elif ch == ",":
+#             if current == "":
+#                 valid = False
+#                 break
+#             listtotal += int(current)
+#             listcount += 1
+#             current = ""
+#         else:
+#             valid = False
+#             break
+
+#     # add last number
+#     if current != "":
+#         listtotal += int(current)
+#         listcount += 1
+#     else:
+#         valid = False
+
+#     if valid:
+#         print(f"length: {listcount}")
+#         print(f"total: {listtotal}")
+#         break
+#     else:
+#         print("Invalid")
+
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 18: Date String Format Check (DD-MM)
+# Ask for a date in "DD-MM" format:
+# - Exactly 5 characters
+# - '-' at position 3
+# - DD between 01 to 31
+# - MM between 01 to 12
+# Repeat until valid, then print "Date accepted: ".
+#------------------------------------------------------------
+# date = input("Enter date (dd-mm): ")
+
+# if len(date) == 5 and date[2] == "-" and date[0:2].isdigit() and date[3:5].isdigit():
+
+#     day = int(date[0:2])
+#     month = int(date[3:5])
+
+#     if 1 <= month <= 12:
+#         if month in [1, 3, 5, 7, 8, 10, 12]:
+#             valid_days = 31
+#         elif month in [4, 6, 9, 11]:
+#             valid_days = 30
+#         else:  # February
+#             valid_days = 29
+
+#         if 1 <= day <= valid_days:
+#             print("Valid date")
+#         else:
+#             print("Invalid date")
+#     else:
+#         print("Invalid date")
+
+# else:
+#     print("Invalid format")
+
+
+
+
+#------------------------------------------------------------
+# Exercise 19: Unique Username
+# Existing list: taken = ["amy", "bala", "charlie", "debin", "eliza"]
+# Ask for username:
+# - Not empty
+# - Length 3 to 12
+# - Not already in 'taken' (case-sensitive)
+# Keep asking until valid, add it to taken list, then print "Registered: ".
+#------------------------------------------------------------
+# taken = ["amy", "bala", "charlie", "debin", "eliza"]
+# while True:
+#     user = input("Enter a username: ")
+#     if user != "":
+#         if len(user) >= 3 and len(user) <= 12:
+#             if user not in taken:
+#                 taken.append(user)
+#                 print(f"Registered {user}")
+#                 break
+#             else:
+#                 print("Username has been taken")
+#         else:
+#             print("Username too short or too long")
+#     else:
+#         print("Empty username")
+
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 20: SKU Validation
+# Valid SKUs: ["A-1001", "B-2400", "C-0350", "Z-9999"]
+# Input rules:
+# - Not empty
+# - Format: Letter '-' followed by 4 digits
+# - Must exist in valid_skus
+# Keep asking until valid, then print "SKU verified".
+#------------------------------------------------------------
+# valid_skus = ["A-1001", "B-2400", "C-0350", "Z-9999"]
+
+# while True:
+#     sku = input("Enter SKU: ")
+
+#     if sku == "":
+#         print("Invalid")
+#         continue
+
+#     # format check: Letter-DigitDigitDigitDigit
+#     if len(sku) == 6 and sku[0].isalpha() and sku[1] == "-" and sku[2:6].isdigit():
+        
+#         if sku in valid_skus:
+#             print("SKU verified")
+#             break
+#         else:
+#             print("Invalid")
+#     else:
+#         print("Invalid")
+        
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 21: Password Confirmation
+# Ask for password:
+# - Non-empty
+# - Length 8 to 16
+# - Must include at least one uppercase and one digit
+# If pass validation above, ask again to confirm. If mismatch, print "Mismatch" and restart.
+# When valid and confirmed, print "Password confirmed".
+#------------------------------------------------------------
+# valid = False
+
+# while True:
+#     if not valid:
+#         password = input("Enter a password: ")
+
+#         if password == "":
+#             print("Empty password")
+
+#         elif len(password) < 8 or len(password) > 16:
+#             print("Password too short or too long")
+
+#         else:
+#             has_upper = False
+#             has_digit = False
+
+#             for i in password:
+#                 if i.isupper():
+#                     has_upper = True
+#                 if i.isdigit():
+#                     has_digit = True
+
+#             if has_upper and has_digit:
+#                 valid = True
+#             else:
+#                 print("Include at least one number and one uppercase")
+
+#     else:
+#         password2 = input("Confirm password: ")
+
+#         if password2 == password:
+#             print("Password confirmed")
+#             break
+#         else:
+#             valid = False
+#             print("Password not confirmed")
+
+
+
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 22: Bounded Range Collector
+# Collect 5 valid integers between 1 and 50 inclusive.
+# If invalid (format/range), print "Invalid" and retry without counting.
+# After 5 valid numbers, print min and max.
+# Sample Inputs: 10, 50, 1, 33, 25
+# Output: Min=1, Max=50
+#------------------------------------------------------------
+integercount = 0
+num = []
+while integercount <= 5:
+    ints = int(input("Enter a integer between 1 and 50"))
+    if ints > 0 and ints < 51:
+        num.append(ints)
+        
     else:
-        print("This is not a number")#test
-        '''
-        breh
-        '''
-
+        print("Invalid number")
+print("Smallest:",min(num))
+print("Largest:",max(num))
 
 
 
